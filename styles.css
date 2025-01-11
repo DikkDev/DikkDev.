@@ -1,0 +1,153 @@
+* {
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 400px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: background: rgb(167,199,169);
+background: linear-gradient(0deg, rgba(167,199,169,1) 0%, rgba(123,213,139,0.9915724934985459) 100%);;
+}
+
+.viewgame{
+  text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px; /* Maksimal lebar pada tampilan mobile */
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-width 0.3s ease-in-out;
+    margin-top: 50px;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.links button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.links button:hover {
+    background-color: #45a049;
+}
+/* Transisi untuk animasi muncul dan hilang */
+.content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(-30px); /* Konten dimulai sedikit di atas */
+}
+
+.content .left {
+  text-align: left;
+}
+
+ p {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 600px;
+}
+
+.content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Konten bergerak ke posisi normal (dari atas ke bawah) */
+}
+
+/* Untuk animasi keluar, menghilang ke atas */
+.content.hide {
+    opacity: 0;
+    transform: translateY(-30px); /* Konten bergerak keluar ke atas */
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Styling untuk ikon media sosial, tepat di bawah profil */
+.social-icons {
+    margin-top: 20px; /* Memberikan ruang antara profil dan ikon sosial */
+    display: flex;
+    justify-content: center; /* Memusatkan ikon */
+    gap: 15px; /* Memberikan jarak antara ikon */
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #4CAF50; /* Warna hijau saat dihover */
+}
+
+/* Media Query untuk perangkat dengan lebar layar lebih dari 768px (desktop dan tablet besar) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Lebar kontainer lebih besar di perangkat desktop */
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .links button {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
+
+/* Media Query untuk perangkat dengan lebar layar lebih dari 1024px (desktop besar) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px; /* Lebar kontainer lebih besar untuk desktop besar */
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .links button {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 40px;
+    }
+}
